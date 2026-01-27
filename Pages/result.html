@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../partials/PCE-top.png" type="image/x-icon">
+
+    <title>Examination Result</title>
+</head>
+
+<body>
+    <!-- Will replace header & navbar 
+     after implementing css & php -->
+    <header>
+        <div class="Header-info">
+            <!-- banner and other components -->
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Examination Result</h2>
+            <hr>
+
+            <div class="result-generator">
+
+                <div class="exam-type">
+                    <label for="exam-type-result">Select Examination Type</label>
+                    <select name="exam-type-result" id="exam-type-result">
+                        <!-- Javascript willbe utilized for this action -->
+                        <option value="Internal">Internal</option>
+                        <option value="Semester">Semester</option>
+                    </select>
+                </div>
+                <div id="result-info-form">
+                    <h4>Details to be Filled:</h4>
+                    <form action="./result.html" method="post">
+                        <!-- Javascript will be used 
+                      for dynamic dropdown -->
+                        <label for="admission-year">Admission Year</label>
+                        <select name="admission-year" id="admission-year">
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+                        
+                        <label for="academic-year">Academic Year</label>
+                        <select name="academic-year" id="academic-year">
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select><br><br>
+
+                        <label for="course-id">Course Id</label>
+                        <select name="course-id" id="course-id">
+                            <option value="0000IT">0000IT</option>
+                        </select>
+
+                        <label for="exam-id">Exam Id</label>
+                        <select name="exam-id" id="exam-id">
+                            <option value="0000IT-xyz">0000IT-xyz</option>
+                        </select><br><br>
+
+                        <label for="class-id">Class Id</label>
+                        <select name="class-id" id="class-id">
+                            <option value="0000IT-BTECH-xyz">0000IT-BTECH-xyz</option>
+                        </select>
+
+                        <!-- decision based(internal/semester) -->
+                        <label for="semester-selection">Semester</label>
+                        <select name="semester-selection" id="semester-selection">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select><br><br><hr>
+
+                        <label for="exam-category">Select Examination Category</label>
+                        <select name="exam-category" id="exam-category">
+                            <option value="regular">Regular</option>
+                            <option value="ATKT">ATKT</option>
+                        </select> <br><hr>
+                       
+                        <div><br>
+                            <button class="submit-btn">View Result</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
