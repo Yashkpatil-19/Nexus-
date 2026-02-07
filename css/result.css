@@ -1,4 +1,8 @@
 /* ===== Basic Reset ===== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,9 +12,11 @@ body {
 
 /* ===== Header ===== */
 header {
-    background-color: #003366;;
+    background-color: #a41d31;
     color: white;
     padding: 15px;
+    border-bottom: 4px solid #FFCB00;
+    text-align: center;
 }
 
 /* ===== Main Area ===== */
@@ -19,9 +25,21 @@ main {
 }
 
 /* ===== Page Title ===== */
+.exr {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 #ex-re {
+    width: 30%;
+    min-width: 220px;      /* prevents shrinking too much */
+    padding: 6px 10px;
     text-align: center;
-    color: #003366;
+    border: 1px solid rgb(255, 204, 0);
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    color: #a41d31;
 }
 
 hr {
@@ -30,25 +48,14 @@ hr {
 
 /* ===== Result Box ===== */
 .result-generator {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     padding: 15px;
     max-width: 700px;
+    width: 100%;
     margin: auto;
     border: 1px solid #ccc;
     border-radius: 6px;
-    
 }
-
-/* ===== Exam Type Section ===== */
-.exam-type {
-    margin-bottom: 15px;
-}
-
-/* .exam-type label {
-    display: block;
-    margin-bottom: 5px;
-
-} */
 
 /* ===== Form Styling ===== */
 label {
@@ -59,33 +66,53 @@ label {
 
 select {
     width: 100%;
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 4px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 6px;
 }
 
 /* ===== Button ===== */
 .submit-btn {
-    margin-top: 15px;
-    padding: 8px;
+    margin-top: 20px;
+    padding: 10px;
     width: 100%;
-    background-color: #003366;
+    background-color: #a41d31;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .submit-btn:hover {
-    background-color: #0055aa;
+    background-color: #7d1524;
 }
 
-/* ===== Simple Responsive Design ===== */
+/* ===== Tablet (≤ 900px) ===== */
+@media screen and (max-width: 900px) {
+    #ex-re {
+        width: 50%;
+    }
+}
+
+/* ===== Mobile (≤ 600px) ===== */
 @media screen and (max-width: 600px) {
-    .result-generator {
-        padding: 10px;
+    header {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #ex-re {
+        width: 90%;
+        font-size: 14px;
     }
 
     label {
-        font-size: 13px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px;
     }
 }
